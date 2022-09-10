@@ -4,7 +4,7 @@
     margin: 0px;
 }
 
-.container{
+.container{ 
     display: flex;
     width: 100%;
     height:600px;
@@ -12,10 +12,10 @@
 }
 .body{
     flex: 1 1 auto; /*grow, shrink, basis*/
-    display: flex;
+    display: flex; /*내용부분 가로로 만듬*/
 }
 .header{
-    border: 1px solid black;
+    border: 3px solid black;
     /*min-height: 100px; 최소크기 고정*/
 }
 
@@ -55,18 +55,18 @@ a{
 }
 @media screen and (max-width:1020px) {
     .navbar{
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column; /*위에서 아래로 정렬*/
+        align-items: flex-start; /*왼쪽에 붙음*/
     }
     .navbar_menu{
         flex-direction: column;
-        align-items: center;
+        align-items: center; /*세로 중간정렬*/
         width: 100%; /*크기를 100%해주고 center잡자*/
         display: none; /*안보이게 가림*/
     }
     .navbar_menu li{
-        width: 100%;
-        text-align: center;
+        width: 100%; 
+        text-align: center; /*안보이게 가림*/
     }
     .navbar_icons{
         width: 100%;
@@ -75,7 +75,7 @@ a{
         display: none; /*안보이게 가림*/
     }
     .navbar_toggleBtn{
-        display: block;
+        display: block; /*none을 보여주게함*/
         position: absolute; /*부모기준으로 하기떔에 좌측상단에 붙음*/
         right: 32px;
         top: 17px;
@@ -92,22 +92,22 @@ a{
     }
     .navbar_menu.active,
     .navbar_icons.active{ /*눌러줌*/
-        display: flex;
+        display: flex; /*정렬*/
     }
 }
 
 
 .left{
     border: 1px solid black;
-    flex: 1;
+    flex: 1; /*몇대몇으로할지 비율을잡아줌*/
 }
-.center{
+.center{ /*중심부의 내용을 다시한번 flex로해서 잡아줌*/
     display: flex;
     justify-content: space-between;
     justify-content: center;
     flex-wrap: wrap;
     border: 1px solid black;
-    flex: 5;
+    flex: 5; /*몇대몇으로할지 비율을잡아줌*/
 }
 .center .aticle1{
     border: 1px solid purple;
@@ -135,7 +135,7 @@ a{
 }
 .right{
     border: 1px solid black;
-    flex: 1;
+    flex: 1; /*몇대몇으로할지 비율을잡아줌*/
 }
 .footer{
     border: 1px solid black;
